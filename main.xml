@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+  <docinfo>
+    <rename element="chapter">Kapitel</rename>
+    <rename element="theorem">Satz</rename>
+    <rename element="proof">Begründung</rename>
+    <rename element="figure">Abbildung</rename>
+  </docinfo>
+  <book xml:id="hgrp-bericht-zur-videoserie">
+    <title>Hyperbolische Geometrie und reguläre Parkettierungen</title>
+    <subtitle>Eine Videoserie zum Einstieg in die nicht-eukdlidische Geometrie</subtitle>
+
+
+    <chapter xml:id="kap-videos">
+      <title>Übersicht und Kommentare zu den Videos</title>
+      <introduction>
+        TODO: weshalb Videos, Hinweis zu den ergänzenden Texten
+      </introduction>
+
+      <p>
+        Hier werden die Videos inkl. ein paar kurzen Kommentaren verlinkt.
+      </p>
+
+    </chapter>
+
+    <chapter xml:id="kap-erg">
+      <title>Ergänzende Informationen</title>
+      <introduction>
+        Meines Erachtens können in Videos nicht alle Sachverhalte befriedigend und präzise erläutert werden. Insbesondere dann, wenn es mathematisch etwas anspruchsvoller wird, ist ein Text schlicht und einfach die bessere Wahl.
+        In diesem Kapitel werden die Stellen in den Videos, wo ich - um die Videos nicht allzu kompliziert zu machen - mathematische Details zu stark vereinfache, mit Hilfe von Texten ergänzt. Dies sind insbesondere vollständiger ausformulierte Sätze und die Begründungen dazu.
+        Ich erhoffe mir mit dieser Kombination, dass man sich auf der einen Seite mit Hilfe der Videos relativ rasch einen Überblick über die Materie verschaffen kann, und dass man sich auf der anderen Seite - wenn man es genauer wissen möchte - die Details in Texten vertiefen kann.
+      </introduction>
+      <section>
+        <title>Kreisspiegelung</title>
+        <theorem xml:id="ks-bild-dreieck">
+          <title>Ein Dreieck mit Eckpunkt <m>O</m> und sein Bild sind ähnlich</title>
+          <statement>
+            <p>
+              Sei <m>k</m> ein Kreis mit Mittelpunkt <m>O</m> und <m>P</m> und <m>Q</m> zwei Punkte ungleich <m>O</m>, sodass <m>P</m>, <m>Q</m> und <m>O</m> nicht auf der gleichen Gerade liegen. Mit <m>P'</m> resp. <m>Q'</m> bezeichnen wir die Kreisspiegelung von <m>P</m> resp. <m>Q</m> an <m>k</m>. Dann sind die Dreiecke <m>\Delta OPQ</m> und <m>\Delta OQ'P'</m> ähnlich.
+            </p>
+          </statement>
+          <image source="geogebra/02_01_01_a_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck.svg" width="50%"/>
+
+          <proof>
+            <p>
+              Sei <m>R</m> der Radius von <m>k</m>. Aus der Definition der Kreisspiegelung folgt:
+              <me>\frac{|OP' |}{|OQ'|} =\frac{\frac{R^2}{|OP|}}{\frac{R^2}{|OQ|}}=\frac{|OQ|}{|OP|}</me>.
+              Den Punkt <m>P'</m> resp. <m>Q'</m> spiegeln wir an der Winkelhalbierenden im Punkt <m>O</m> des Dreiecks <m>\Delta OPQ</m> zu <m>P''</m> resp. <m>Q''</m>.
+              <image source="geogebra/02_01_01_b_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck_Beweis.svg" width="50%"/>
+              Damit gilt
+              <me>\frac{|OP''|}{|OQ''|} =\frac{|OP'|}{|OQ'|}=\frac{|OQ|}{|OP|}</me>.
+              Mit der Umkehrung des ersten Strahlensatzes folgt, dass die Geraden <m>Q''P''</m> und <m>PQ</m> parallel sind und damit z.B. <m>\angle OQ''P''=\angle OPQ</m> gilt. Da <m>P''</m> und <m>Q''</m> durch Spiegelung an der Winkelhalbierenden entstanden sind, gilt auch <m>\angle OQ''P''=\angle OQ'P'</m>, woraus mit dem Obigen <m>\angle OQ'P'=\angle OPQ</m> folgt. Zwei und damit alle drei Winkel in den Dreiecken <m>\Delta OPQ</m> und <m>\Delta OQ'P'</m> sind also gleich, die Behauptung.
+            </p>
+          </proof>
+        </theorem>
+
+        <theorem xml:id="ks-bilder-von-geraden-kreisen">
+          <title>Bilder von Geraden oder Kreisen sind Kreise oder Geraden</title>
+          <statement>
+            <p>
+              Sei <m>k</m> ein Kreis mit Mittelpunkt <m>O</m>. Dann gilt unter Kreisspiegelung an <m>k</m>:
+              <ol>
+                <li xml:id="ks-gerade-auf-gerade">
+                  Eine Gerade <m>g</m> durch <m>O</m> wird auf sich selbst abgebildet (<xref ref="ks-abb-gerade-auf-gerade"/>).
+                </li>
+                <li xml:id="ks-gerade-auf-kreis">
+                  Ein Kreis <m>h</m> durch <m>O</m> wird auf eine Gerade nicht durch <m>O</m> abgebildet (<xref ref="ks-abb-gerade-auf-kreis"/>) und umgekehrt.
+                </li>
+                <li xml:id="ks-kreis-auf-kreis">
+                  Ein Kreis <m>h</m> nicht durch <m>O</m> wird auf einen Kreis <m>h'</m> nicht durch <m>O</m> abgebildet (<xref ref="ks-abb-kreis-auf-kreis"/>). Aber: der Mittelpunkt von <m>h</m> wird nicht auf den Mittelpunkt von <m>h'</m> abgebildet!
+                </li>
+              </ol>
+            </p>
+            <sidebyside widths="33% 33% 33%" margins="0% 0% 0%">
+              <figure xml:id="ks-abb-gerade-auf-gerade">
+                <caption>Gerade durch <m>O</m> auf Gerade durch <m>O</m></caption>
+                <image source="geogebra/02_01_02_b_Kreisspiegelung_Gerade_durch_O_auf_Gerade_durch_O.svg"></image>
+              </figure>
+              <figure xml:id="ks-abb-gerade-auf-kreis">
+                <caption>Gerade nicht durch <m>O</m> auf Kreis durch <m>O</m> resp. umgekehrt</caption>
+                <image source="geogebra/02_01_02_a_Kreisspiegelung_Gerade_nicht_durch_O_auf_Gerade_durch_O.svg"></image>
+              </figure>
+              <figure xml:id="ks-abb-kreis-auf-kreis">
+                <caption>Kreis nicht durch <m>O</m> auf Kreis nicht durch <m>O</m></caption>
+                <image source="geogebra/02_01_02_c_Kreisspiegelung_Kreis_nicht_durch_O_auf_Kreis_nicht_durch_O.svg"></image>
+              </figure>
+            </sidebyside>
+          </statement>
+
+          <proof>
+            <p>
+              <p>
+                  <xref ref="ks-gerade-auf-gerade"/> folgt direkt aus der Definition der Kreisspiegelung.
+                </p>
+              <sidebyside>
+                <p>
+                  Für die Begründung von <xref ref="ks-gerade-auf-kreis"/> betrachten wir <xref ref="ks-abb-bew-gerade-auf-kreis"/>. Die Behauptung ergibt sich aus <xref ref="ks-bild-dreieck"/> angewendet auf das Dreieck <m>\Delta OPS</m> resp. dessen Bild <m>\Delta OS'P'</m> und dem Satz von Thales resp. dessen Umkehrung.
+                </p>
+                <figure xml:id="ks-abb-bew-gerade-auf-kreis">
+                  <caption>Hilfsabbildung zum Beweis von <xref ref="ks-gerade-auf-kreis"/></caption>
+                  <image source="geogebra/02_01_03_a_Kreisspiegelung_Gerade_nicht_durch_O_auf_Kreis_durch_O_Beweis.svg"></image>
+                </figure>
+              </sidebyside>
+              <p>
+                Die Begründung von <xref ref="ks-kreis-auf-kreis"/> ist kniffliger. Wir arbeiten mit folgender Abbildung:
+                <figure xml:id="ks-abb-bew-kreis-auf-kreis">
+                  <caption>Hilfsabbildung zum Beweis von <xref ref="ks-kreis-auf-kreis"/></caption>
+                  <image source="geogebra/02_01_04_Kreisspiegelung_Kreis_nicht_durch_O_auf_Kreis_nicht_durch_O_Beweis.svg"></image>
+                </figure>
+                Wenn wir zeigen können, dass <m>δ:=\angle S_1'P'S_2'</m> ein rechter Winkel ist, folgt die Behauptung aus der Umkehrung des Satzes von Thales. Die Identitäten für die in der Konfiguration an verschiedenen Orten beschrifteten Winkelgrössen <m>\alpha</m> und <m>\alpha + \delta</m> ergeben sich aus <xref ref="ks-bild-dreieck"/>. Aus der Winkelsumme für das Dreieck <m>\Delta S_2PS_1</m> ergibt sich: <m>180°=((180°-(\alpha + \delta))+90°+\alpha)</m>, woraus <m>\delta=90°</m> folgt, was zu zeigen war. 
+              </p>
+            </p>
+          </proof>
+        </theorem>
+
+
+
+        <theorem>
+          <title>TODO</title>
+          <statement>
+            <p>
+              TODO
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              TODO
+            </p>
+          </proof>
+        </theorem>
+
+      </section>
+      
+
+
+
+    </chapter>
+
+
+  </book>
+</pretext>
