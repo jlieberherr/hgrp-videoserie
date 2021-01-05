@@ -1,2 +1,2 @@
-# hgrp-bericht-zur-videoserie
-Ergänzungen zur Videoserie "Hyperbolische Geometrie und reguläre Parkettierungen"
+# hgrp-videoserie
+Homepage zur Videoserie "Hyperbolische Geometrie und reguläre Parkettierungen"
