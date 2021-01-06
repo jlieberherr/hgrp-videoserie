@@ -3,6 +3,8 @@
   <docinfo>
     <rename element="chapter">Kapitel</rename>
     <rename element="theorem">Satz</rename>
+    <rename element="lemma">Hilfssatz</rename>
+    <rename element="corollary">Folgerung</rename>
     <rename element="proof">Begründung</rename>
     <rename element="figure">Abbildung</rename>
   </docinfo>
@@ -10,17 +12,14 @@
     <title>Hyperbolische Geometrie und reguläre Parkettierungen</title>
     <subtitle>Eine Videoserie zum Einstieg in die nicht-eukdlidische Geometrie</subtitle>
 
-
     <chapter xml:id="kap-videos">
       <title>Übersicht und Kommentare zu den Videos</title>
       <introduction>
         TODO: weshalb Videos, Hinweis zu den ergänzenden Texten
       </introduction>
-
       <p>
         Hier werden die Videos inkl. ein paar kurzen Kommentaren verlinkt.
       </p>
-
     </chapter>
 
     <chapter xml:id="kap-erg">
@@ -40,7 +39,6 @@
             </p>
           </statement>
           <image source="geogebra/02_01_01_a_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck.svg" width="50%"/>
-
           <proof>
             <p>
               Sei <m>R</m> der Radius von <m>k</m>. Aus der Definition der Kreisspiegelung folgt:
@@ -53,7 +51,6 @@
             </p>
           </proof>
         </theorem>
-
         <theorem xml:id="ks-bilder-von-geraden-kreisen">
           <title>Bilder von Geraden oder Kreisen sind Kreise oder Geraden</title>
           <statement>
@@ -86,12 +83,11 @@
               </figure>
             </sidebyside>
           </statement>
-
           <proof>
             <p>
               <p>
-                  <xref ref="ks-gerade-auf-gerade"/> folgt direkt aus der Definition der Kreisspiegelung.
-                </p>
+                <xref ref="ks-gerade-auf-gerade"/> folgt direkt aus der Definition der Kreisspiegelung.
+              </p>
               <sidebyside>
                 <p>
                   Für die Begründung von <xref ref="ks-gerade-auf-kreis"/> betrachten wir <xref ref="ks-abb-bew-gerade-auf-kreis"/>. Die Behauptung ergibt sich aus <xref ref="ks-bild-dreieck"/> angewendet auf das Dreieck <m>\Delta OPS</m> resp. dessen Bild <m>\Delta OS'P'</m> und dem Satz von Thales resp. dessen Umkehrung.
@@ -113,8 +109,86 @@
           </proof>
         </theorem>
 
+        <theorem xml:id="ks-winkeltreue">
+          <title>Winkel bleiben unverändert</title>
+          <statement>
+            <p>
+              Der Schnittwinkel zwischen zwei sich echt schneidenden Geraden oder Kreisen bleibt unter Kreisspiegelung an einem Kreis <m>k</m> mit Mittelpunkt <m>O</m> unverändert.
+            </p>
+            <p>
+              Es ist jeweils zu unterscheiden zwischen Geraden und Kreisen, welche durch <m>O</m> oder nicht durch <m>O</m> gehen, insgesamt gibt es also <m>2^2\cdot 2^2=16</m> Möglichkeiten. Das folgende Bild zeigt zwei dieser Fälle:
+            </p>
+            <sidebyside>
+              <figure xml:id="ks-abb-schnittwinkel-kreis-kreis">
+                <caption>Schnittwinkel zwischen zwei Kreisen, welche nicht durch <m>O</m> gehen vor und nach Kreisinversion.</caption>
+                <image source="geogebra/02_01_05_Kreisspiegelung_Winkelerhaltung_Kreise.svg"></image>
+              </figure>
+              <figure xml:id="ks-abb-schnittwinkel-kreis-gerade">
+                <caption>Schnittwinkel zwischen einem Kreis nicht durch <m>O</m> und einer Geraden nicht durch <m>O</m> vor und nach Kreisinversion.</caption>
+                <image source="geogebra/02_01_06_Kreisspiegelung_Winkelerhaltung_Kreis_Gerade.svg"></image>
+              </figure>
+            </sidebyside>
+          </statement>
+          <proof>
+            <p>
+              Wir beweisen den Satz nur für den Fall von zwei sich schneidenden nicht durch <m>O</m> gehenden Kreisen wie in <xref ref="ks-abb-schnittwinkel-kreis-kreis"/>. Die restlichen Fälle folgen ähnlich. Wir arbeiten  mit folgender Konfiguration:
+            </p>
+            <figure xml:id="ks-abb-bew-schnittwinkel-kreis-kreis">
+              <caption>Hilfsabbildung zum Beweis des Falles von zwei nicht durch <m>O</m> gehenden Kreise.</caption>
+              <image source="geogebra/02_01_07_Kreisspiegelung_Winkelerhaltung_Kreise_Beweis.svg"></image>
+            </figure>
+            <p>
+              Die beiden sich schneidenden Kreise bezeichnen wir mit <m>a</m> und <m>b</m>. Wir wählen eine Gerade <m>g</m> durch <m>O</m>, welche die beiden Kreise <m>a</m> und <m>b</m> echt schneidet und bezeichnen mit <m>K</m> einen der beiden Schnittpunkt von <m>g</m> mit <m>a</m> resp. mit <m>I</m> einen der beiden Schnittpunkt von <m>g</m> mit <m>b</m>. Sei <m>L</m> einer der beiden Schnittpunkte von <m>a</m> und <m>b</m>. Wir apostrophieren wie üblich die an <m>k</m> kreisgespiegelten Objekte. Wir zeigen jetzt, dass die beiden Winkel <m>\alpha := \angle LLI</m> und <m>\beta := \angle I'L'K'</m> identisch sind. Dies folgt aus
+              <me>\beta = \angle OL'K'- \angle OL'I' = \angle LKO - \angle LIO = (180° - \angle IKL) - \angle LIO = \alpha</me>,
+              wobei wir in der zweiten Gleichung zwei Mal <xref ref="ks-bild-dreieck"/> anwenden und wir in der letzten Gleichung ausnützen, dass die Winkelsumme im Dreieck <m>\Delta IKL</m> gleich <m>180°</m> ist.
+            </p>
+            <p>
+              Die Behauptung folgt nun mit folgendem Grenzwertargument: Wir schieben die Gerade <m>g</m> immer näher an den Schnittpunkt <m>L</m> heran. Dabei nähert sich der Winkel <m>\alpha</m> resp. <m>\beta</m> dem Schnittwinkel (oder dem komplementären Schnittwinkel) von <m>a</m> und <m>b</m> resp. von <m>a'</m> und <m>b'</m>. Da dabei immer <m>\alpha = \beta</m> gilt, folgt, dass dies auch "im Unendlichen" noch gilt. Der Schnittwinkel zwischen <m>a</m> und <m>b</m> ist also identisch mit dem Schnittwinkel zwischen <m>a'</m> und <m>b'</m>.
+            </p>
+            <p>
+              Die Idee dieses Beweises habe ich von der wunderbaren Website <url href="http://www.malinc.se/noneuclidean/en/circleinversion.php">Non-Euclidean Geometry</url> von <attribution>Malin Christersson</attribution> übernommen.
+            </p>
+          </proof>
+        </theorem>
+        <lemma xml:id="ks-senkrechte-kreise-eindeutig">
+          <statement>
+            <p>
+              Sei <m>k</m> ein Kreis und <m>P</m>, <m>Q</m> zwei Punkte auf <m>k</m>, welche sich auf <m>k</m> nicht gegenüber liegen. Dann gibt es genau einen Kreis <m>h</m>, welcher senkrecht auf <m>k</m> steht und durch <m>P</m> und <m>Q</m> geht.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Die beiden Tangenten an <m>k</m> durch <m>P</m> und <m>Q</m> schneiden sich in einem Punkt <m>S</m>. Der Kreis mit Mittelpunkt <m>S</m> durch <m>P</m> (und damit auch durch <m>Q</m>) steht senkrecht auf <m>k</m>, womit die Existenz begründet ist.
+            </p>
+            <p>
+              Die Eindeutigkeit folgt aus der Tatsache, dass, wenn sich zwei Kreise <m>k</m> und <m>h</m> senkrecht schneiden, sich auch die Radien von <m>k</m> und <m>h</m> zu einem der beiden Schnittpunkte senkrecht schneiden und sich somit nur der obige Punkt <m>S</m>, welcher ohne die Existenz von <m>h</m> konstruiert wurde, als Mittelpunkt von <m>h</m> in Frage kommt. 
+            </p>
+          </proof>
+        </lemma>
 
-
+        <theorem>
+          <title>Die zum Spiegelungskreis senkrechten Kreise sind genau diejenigen, welche auf sich selbst abgebildet werden</title>
+          <statement>
+            <p>
+              Sei <m>k</m> ein Kreis und <m>h</m> ein <m>k</m> echt schneidender Kreis oder eine <m>k</m> echt schneidende Gerade. Dann wird <m>h</m> bei Kreisspiegelung an <m>k</m> auf sich selbst abgebildet genau dann, wenn <m>k</m> und <m>h</m> senkrecht aufeinander stehen.
+            </p>
+            <p>
+              Insbesondere wird das Innere des Kreises<m>h</m> unter Kreisspiegelung an <m>k</m> auf sich selbst abgebildet. Genauer: Das Innere von <m>h</m> wird durch <m>k</m> in zwei Sektoren <m>S_1</m> und <m>S_2</m> zerteilt. Die Kreisspiegelung an <m>k</m> bildet den Sektor <m>S_1</m> auf den Sektor <m>S_2</m> ab und umgekehrt.
+            </p>
+            <figure xml:id="ks-abb-senkrechte-kreise">
+                <image source="geogebra/02_01_08_Kreisspiegelung_senkrechte_Kreise.svg" width="50%"></image>
+            </figure>
+          </statement>
+          <proof>
+            <p>
+              Wir zeigen zuerst, dass <m>h</m> auf sich selbst abgebildet wird, wenn sich <m>k</m> und <m>h</m> senkrecht schneiden. Wenn <m>h</m> eine Gerade ist (Fall 1), muss diese, da sie senkrecht auf <m>k</m> steht durch den Mittelpunkt von <m>k</m> verlaufen und wird deshalb auf sich selbst abgebildet. Sei jetzt (Fall 2) <m>h</m> ein Kreis und <m>P</m> resp. <m>Q</m> die beiden Schnittpunkte von <m>k</m> und <m>h</m>. Die beiden Punkte <m>P</m> und <m>Q</m> liegen sich auf <m>k</m> nicht gegenüber (ansonsten wäre <m>h</m> eine Gerade). Sei <m>h'</m> das Bild von <m>h</m> nach Kreisspiegelung an <m>k</m>. Aus <xref ref="ks-winkeltreue"/> folgt, dass sich auch <m>h'</m> und <m>k</m> senkrecht schneiden. Zudem liegen natürlich auch <m>P</m> und <m>Q</m> auf <m>h'</m>. Mit <xref ref="ks-senkrechte-kreise-eindeutig"/> folgt, dass <m>h</m> und <m>h'</m> identisch sind.
+            </p>
+            <p>
+              Jetzt zeigen wir die andere Richtung: wenn <m>h</m> unter Kreisspiegelung an <m>k</m> auf sich selbst abgebildet wird, so stehen <m>k</m> und <m>h</m> senkrecht aufeinander. Wenn <m>h</m> eine Gerade ist (Fall 1), muss diese durch den Mittelpunkt von k gehen, da alle anderen Geraden unter Kreisspiegelung an <m>k</m> nicht auf sich selbst abgebildet werden. Es folgt, dass <m>k</m> und <m>h</m> senkrecht aufeinander stehen. Sei jetzt (Fall 2) <m>h</m> ein Kreis, welcher durch Kreisspiegelung an <m>k</m> auf sich selbst abgebildet wird. <m>h</m> muss sich mit <m>k</m> schneiden, da <m>h</m> sonst komplett ausserhalb oder komplett innerhalb von <m>k</m> läge, also das Bild unter Kreisspiegelung an <m>k</m> nicht gleich <m>h</m> sein könnte. Sei <m>g</m> die Gerade durch den Mittelpunkt von <m>k</m> und einen der Schnittpunkte <m>P</m> von <m>h</m> und <m>k</m> sowie <m>R</m> ein beliebiger Schnittpunkt von <m>g</m> mit <m>h</m>. Wir nehmen an, dass <m>P\neq R</m> gilt, also <m>R</m> entweder innerhalb resp. ausserhalb von <m>k</m> liegt. Das Bild <m>R'</m> von <m>R</m> unter Kreisspiegelung an <m>k</m> liegt also ausserhalb resp. innerhalb von <m>k</m>. Die drei Punkte <m>P</m>, <m>R</m> und <m>R'</m> sind also verschieden und liegen alle auf der Geraden <m>g</m>. Sie liegen aber auch alle auf dem Kreis <m>h</m>, da <m>h</m> auf sich selbst abgebildet wird. Ein Kreis kann aber keine drei unterschiedlichen auf einer Geraden liegende Punkte beinhalten, ein Widerspruch. Es muss also <m>P = R</m> gelten, d.h. <m>h</m> und <m>g</m> schneiden sich nur in einem Punkt. Damit ist <m>g</m> eine Tangente an <m>h</m>, woraus folgt, dass <m>h</m> senkrecht auf <m>k</m> steht.
+            </p>
+          </proof>
+        </theorem>
+        
         <theorem>
           <title>TODO</title>
           <statement>
@@ -122,7 +196,6 @@
               TODO
             </p>
           </statement>
-
           <proof>
             <p>
               TODO
@@ -132,9 +205,6 @@
 
       </section>
       
-
-
-
     </chapter>
 
 
