@@ -37,14 +37,19 @@
             <p>
               Sei <m>k</m> ein Kreis mit Mittelpunkt <m>O</m> und <m>P</m> und <m>Q</m> zwei Punkte ungleich <m>O</m>, sodass <m>P</m>, <m>Q</m> und <m>O</m> nicht auf der gleichen Gerade liegen. Mit <m>P'</m> resp. <m>Q'</m> bezeichnen wir die Kreisspiegelung von <m>P</m> resp. <m>Q</m> an <m>k</m>. Dann sind die Dreiecke <m>\Delta OPQ</m> und <m>\Delta OQ'P'</m> ähnlich.
             </p>
+            <figure xml:id="ks-abb-bild-dreieck">
+                <image source="geogebra/02_01_01_a_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck.svg" width="60%"/>
+            </figure>
           </statement>
-          <image source="geogebra/02_01_01_a_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck.svg" width="50%"/>
+          
           <proof>
             <p>
               Sei <m>R</m> der Radius von <m>k</m>. Aus der Definition der Kreisspiegelung folgt:
               <me>\frac{|OP' |}{|OQ'|} =\frac{\frac{R^2}{|OP|}}{\frac{R^2}{|OQ|}}=\frac{|OQ|}{|OP|}</me>.
               Den Punkt <m>P'</m> resp. <m>Q'</m> spiegeln wir an der Winkelhalbierenden im Punkt <m>O</m> des Dreiecks <m>\Delta OPQ</m> zu <m>P''</m> resp. <m>Q''</m>.
-              <image source="geogebra/02_01_01_b_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck_Beweis.svg" width="50%"/>
+              <figure xml:id="ks-bew-abb-bild-dreieck">
+                <image source="geogebra/02_01_01_b_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck_Beweis.svg" width="60%"/>
+              </figure>
               Damit gilt
               <me>\frac{|OP''|}{|OQ''|} =\frac{|OP'|}{|OQ'|}=\frac{|OQ|}{|OP|}</me>.
               Mit der Umkehrung des ersten Strahlensatzes folgt, dass die Geraden <m>Q''P''</m> und <m>PQ</m> parallel sind und damit z.B. <m>\angle OQ''P''=\angle OPQ</m> gilt. Da <m>P''</m> und <m>Q''</m> durch Spiegelung an der Winkelhalbierenden entstanden sind, gilt auch <m>\angle OQ''P''=\angle OQ'P'</m>, woraus mit dem Obigen <m>\angle OQ'P'=\angle OPQ</m> folgt. Zwei und damit alle drei Winkel in den Dreiecken <m>\Delta OPQ</m> und <m>\Delta OQ'P'</m> sind also gleich, die Behauptung.
@@ -175,7 +180,7 @@
               Insbesondere wird das Innere des Kreises<m>h</m> unter Kreisspiegelung an <m>k</m> auf sich selbst abgebildet. Genauer: Das Innere von <m>h</m> wird durch <m>k</m> in zwei Sektoren <m>S_1</m> und <m>S_2</m> zerteilt. Die Kreisspiegelung an <m>k</m> bildet den Sektor <m>S_1</m> auf den Sektor <m>S_2</m> ab und umgekehrt.
             </p>
             <figure xml:id="ks-abb-senkrechte-kreise">
-                <image source="geogebra/02_01_08_Kreisspiegelung_senkrechte_Kreise.svg" width="50%"></image>
+                <image source="geogebra/02_01_08_Kreisspiegelung_senkrechte_Kreise.svg" width="60%"></image>
             </figure>
           </statement>
           <proof>
@@ -194,7 +199,7 @@
               Sei <m>k</m> ein Kreis und <m>P</m> ein nicht auf <m>k</m> liegender Punkt ungleich dem Mittelpunkt von <m>k</m> sowie <m>P'</m> die Kreisspiegelung von <m>P</m> an <m>k</m>. Dann steht jeder durch <m>P</m> und <m>P'</m> gehende Kreis senkrecht auf <m>k</m>.
             </p>
             <figure xml:id="ks-abb-kreise-durch-punkt-und-sein-bild">
-                <image source="geogebra/02_01_09_Kreisspiegelung_senkrechte_Kreise_durch_P_und_P'.svg" width="50%"></image>
+                <image source="geogebra/02_01_09_Kreisspiegelung_senkrechte_Kreise_durch_P_und_P'.svg" width="75%"></image>
             </figure>
           </statement>
           <proof>
@@ -207,21 +212,27 @@
           <title>Es kommt nicht auf die Spiegelungsreihenfolge an</title>
           <statement>
             <p>
-              Seien <m>k</m> und <m>h</m> zwei Kreise. Der Mittelpunkt von <m>k</m> liege nicht auf <m>h</m>. Sei <m>P</m> ein Punkt ungleich dem Mittelpunkt von <m>h</m> resp. <m>k</m>. Sei <m>h'</m> der Kreis nach Kreisspiegelung von <m>h</m> an <m>k</m>. Dann ist der Punkt, welcher entsteht, wenn <m>P</m> zuerst an <m>h</m> und dann an <m>k</m> kreisgespiegelt wird, identisch mit dem Punkt, welcher entsteht, wenn <m>P</m> zuerst an <m>k</m> und dann an <m>h'</m> kreisgespiegelt wird.
+              Seien <m>k</m> und <m>h</m> zwei Kreise. Der Mittelpunkt von <m>k</m> liege nicht auf <m>h</m>. Sei <m>h'</m> der Kreis nach Kreisspiegelung von <m>h</m> an <m>k</m>. Sei <m>P</m> ein Punkt, ungleich dem Mittelpunkt von <m>h</m> resp. <m>k</m>. Dann ist der Punkt, welcher entsteht, wenn <m>P</m> zuerst an <m>h</m> und dann an <m>k</m> kreisgespiegelt wird, identisch mit dem Punkt, welcher entsteht, wenn <m>P</m> zuerst an <m>k</m> und dann an <m>h'</m> kreisgespiegelt wird.
             </p>
             <figure xml:id="ks-abb-reihenfolge-egal">
-                <image source="geogebra/02_01_10_a_Kreisspiegelung_Reihenfolge.svg" width="50%"></image>
+                <image source="geogebra/02_01_10_a_Kreisspiegelung_Reihenfolge.svg"></image>
             </figure>
           </statement>
           <proof>
+            <p>
+              Wen <m>P</m> auf <m>h</m> oder <m>k</m> liegt, ist die Aussage klar. Deshalb nehmen wir ohne Einschärnkung an, dass dies nicht der Fall ist.
+            </p>
             <figure xml:id="ks-abb-bew-reihenfolge-egal">
               <image source="geogebra/02_01_10_b_Kreisspiegelung_Reihenfolge_Beweis.svg"></image>
             </figure>
             <p>
-              Wir arbeiten mit den Bezeichnungen in <xref ref="ks-abb-bew-reihenfolge-egal"/>, d.h. <m>R</m> resp. <m>Q</m> ist die Kreisspiegelung von <m>P</m> an <m>h</m> resp. <m>k</m> und <m>R'</m> resp. <m>Q'</m> ist die Kreisspiegelung von <m>R</m> an <m>k</m> resp. von <m>Q</m> an <m>h'</m>. Sei <m>a</m> der Kreis durch <m>P</m>, <m>Q</m> und <m>R</m>. Es folgt mit <xref ref="ks-kreise-durch-punkt-und-sein-bild"/>, dass <m>a</m> sowohl auf <m>k</m> als auch auf <m>h</m> senkrecht steht. Insbesondere wird <m>a</m> unter Kreisspiegelung an <m>k</m> auf sich selbst abgebildet, also muss auch <m>R'</m> auf <m>a</m> liegen. Da <m>h</m> senkrecht auf <m>a</m> steht, folgt mit <xref ref="ks-winkeltreue"/>, dass auch <m>h'</m> senkrecht auf <m>a</m> steht.
+              Wir arbeiten mit den Bezeichnungen in <xref ref="ks-abb-bew-reihenfolge-egal"/>, d.h. <m>R</m> resp. <m>Q</m> ist die Kreisspiegelung von <m>P</m> an <m>h</m> resp. <m>k</m> und <m>R'</m> resp. <m>Q'</m> ist die Kreisspiegelung von <m>R</m> an <m>k</m> resp. von <m>Q</m> an <m>h'</m>.
             </p>
             <p>
-              Sei <m>g</m> die Gerade durch <m>Q</m> und <m>R'</m>. <m>R'</m> ist also einer der beiden Schnittpunkt von <m>g</m> und <m>a</m>. Die Kreisspiegelung <m>g'</m> von <m>g</m> an <m>k</m> ist mit <xref ref="ks-bilder-von-geraden-kreisen"/> ein Kreis (durch den Mittelpunkt von <m>k</m>), welcher <m>P</m> und <m>R</m> enthält, also nach <xref ref="ks-kreise-durch-punkt-und-sein-bild"/> senkrecht auf <m>h</m> steht. Es folgt mit <xref ref="ks-winkeltreue"/>, dass auch <m>g</m> senkrecht auf <m>h'</m> steht. Die Kreisspiegelung <m>Q'</m> von <m>Q</m> an <m>h'</m> liegt also auf <m>g</m>. Andrerseits muss <m>Q'</m> auch auf <m>a</m> liegen (da <m>Q</m> auf <m>a</m> liegt und <m>a</m> unter Kreisspiegelung an <m>h'</m> auf sich selbst abgebildet wird). <m>Q'</m> ist also ein Schnittpunkt von <m>g</m> und <m>a</m>. Da auch <m>R'</m> diese Eigenschaft hat und TODO(es gibt ja zwei Schnittpunkte!), muss <m>R'=Q'</m> gelten. 
+              Der Schlüssel zum Beweis, ist der Kreis <m>a</m> durch die drei Punkte <m>P</m>, <m>Q</m> und <m>R</m>. Dieser steht sowohl auf <m>k</m> als auch auf <m>h</m> senkrecht (<xref ref="ks-kreise-durch-punkt-und-sein-bild"/>). Insbesondere wird <m>a</m> unter Kreisspiegelung an <m>k</m> auf sich selbst abgebildet (<xref ref="ks-senkrechte-kreise-invariant"/>), also muss auch <m>R'</m> auf <m>a</m> liegen. Da <m>h</m> senkrecht auf <m>a</m> steht, folgt mit <xref ref="ks-winkeltreue"/>, dass auch <m>h'</m> senkrecht auf <m>a</m> steht.
+            </p>
+            <p>
+              Sei <m>g</m> die Gerade durch <m>Q</m> und <m>R'</m>. <m>Q</m> und <m>R'</m> sind also die beiden Schnittpunkte von <m>g</m> und <m>a</m>. Die Kreisspiegelung <m>g'</m> von <m>g</m> an <m>k</m> ist mit <xref ref="ks-bilder-von-geraden-kreisen"/> ein Kreis (durch den Mittelpunkt von <m>k</m>), welcher <m>P</m> und <m>R</m> enthält, also nach <xref ref="ks-kreise-durch-punkt-und-sein-bild"/> senkrecht auf <m>h</m> steht. Es folgt mit <xref ref="ks-winkeltreue"/>, dass auch <m>g</m> senkrecht auf <m>h'</m> steht. Die Kreisspiegelung <m>Q'</m> von <m>Q</m> an <m>h'</m> liegt also auf <m>g</m>. Andrerseits muss <m>Q'</m> auch auf <m>a</m> liegen (da <m>Q</m> per Definition von <m>a</m> auf <m>a</m> liegt und <m>a</m> unter Kreisspiegelung an <m>h'</m> auf sich selbst abgebildet wird). <m>Q'</m> ist also auch ein Schnittpunkt von <m>g</m> und <m>a</m>, also gleich <m>Q</m> oder <m>R'</m>. Da <m>P</m> nicht auf <m>h</m> liegt, liegt <m>Q</m> nicht auf <m>h'</m>. Deshalb kann <m>Q'</m> nicht gleich <m>Q</m> sein. Es muss deshalb <m>Q'=R'</m> gelten. 
             </p>
           </proof>
         </theorem>
