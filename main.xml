@@ -40,6 +40,12 @@
             <figure xml:id="ks-abb-bild-dreieck">
                 <image source="geogebra/02_01_01_a_Kreisspiegelung_Grundeigenschaft_Dreieck_auf_Dreieck.svg" width="60%"/>
             </figure>
+			<figure xml:id="ks-test-10">
+                <image source="images/test_image_size_10cm.svg"/>
+            </figure>
+			<figure xml:id="ks-test-3">
+                <image source="images/test_image_size_3cm.svg"/>
+            </figure>
           </statement>
           
           <proof>
